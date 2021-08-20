@@ -11,7 +11,5 @@ RUN dotnet restore "101DockerWeb/101DockerWeb.csproj"
 COPY . .
 WORKDIR "/src/101DockerWeb"
 RUN dotnet build "101DockerWeb.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "101DockerWeb.csproj" -c Release -o /app/publish
 ENTRYPOINT ["dotnet", "101DockerWeb.dll"]
+
