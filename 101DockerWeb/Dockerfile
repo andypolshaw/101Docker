@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["101DockerWeb/101DockerWeb.csproj", "101DockerWeb/"]
 RUN dotnet restore "101DockerWeb/101DockerWeb.csproj"
