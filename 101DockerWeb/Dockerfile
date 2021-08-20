@@ -20,5 +20,3 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "101DockerWeb.dll"]
 
-RUN adduser -D -u 8877 randi
-USER randi
