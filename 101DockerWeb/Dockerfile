@@ -15,7 +15,7 @@ RUN dotnet build "101DockerWeb.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "101DockerWeb.csproj" -c Release -o /app/publish
 
-FROM base AS finalthingy
+FROM base AS finalt
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "101DockerWeb.dll"]
