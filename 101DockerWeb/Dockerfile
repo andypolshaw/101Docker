@@ -2,7 +2,7 @@
 
 FROM 172.30.1.1:5000/helloworld/aspnet:3.1 AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 8080
 
 FROM 172.30.1.1:5000/helloworld/sdk:3.1 AS build
 WORKDIR /src
